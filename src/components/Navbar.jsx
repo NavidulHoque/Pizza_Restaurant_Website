@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PizzaLogo from '../assets/pizza-logo.jpg';
+import Navbar_Lists from './Navbar_Lists.jsx';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,18 +20,11 @@ function Navbar() {
 
       <ul className={`lg:flex lg:flex-row lg:justify-center lg:w-auto lg:items-center lg:gap-x-5 lg:mr-[10px] flex-col items-end w-full text-white text-[25px] list-none ${isOpen ? 'flex' : 'hidden'}`}>
 
-        <li className="w-full lg:h-full text-right lg:justify-self-center">
-          <a href="#home" className="block lg:h-full lg:flex lg:items-center w-full p-2 pr-[10px] hover:bg-[#bdc3c7] hover:text-black transition-all duration-200">Home</a>
-        </li>
-        <li className="w-full lg:h-full text-right">
-          <a href="#menu" className="block lg:h-full lg:flex lg:items-center w-full p-2 pr-[10px] hover:bg-[#bdc3c7] hover:text-black transition-all duration-200">Menu</a>
-        </li>
-        <li className="w-full lg:h-full text-right">
-          <a href="#about" className="block lg:h-full lg:flex lg:items-center w-full p-2 pr-[10px] hover:bg-[#bdc3c7] hover:text-black transition-all duration-200">About</a>
-        </li>
-        <li className="w-full lg:h-full text-right">
-          <a href="#contact" className="block lg:h-full lg:flex lg:items-center w-full p-2 pr-[10px] hover:bg-[#bdc3c7] hover:text-black transition-all duration-200">Contact</a>
-        </li>
+        <Navbar_Lists list="home"/>
+        <Navbar_Lists list="menu"/>
+        <Navbar_Lists list="about"/>
+        <Navbar_Lists list="contact"/>
+        
       </ul>
     </nav>
   );
