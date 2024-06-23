@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import chef from "../assets/chef.jpg"
 import restaurant from "../assets/onepage_restaurant.jpg"
 import Heading from "./Heading.jsx"
 
-function About() {
+function About({aboutRef}) {
     return (
         <div className="bg-[#f44336] grayscale-[70%]">
 
-            <div id="about" className="lg:w-[70vw] w-[90vw] mx-auto py-[80px] text-white">
+            <div ref={aboutRef} className="lg:w-[70vw] w-[90vw] mx-auto py-[80px] text-white">
 
                 <Heading heading="about" />
 

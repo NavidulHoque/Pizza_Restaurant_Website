@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import PizzaLogo from '../assets/pizza-logo.jpg';
 import Navbar_Lists from './Navbar_Lists.jsx';
 
-function Navbar() {
+function Navbar({homeRef, menuRef, aboutRef, contactRef}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -20,10 +21,10 @@ function Navbar() {
 
       <ul className={`lg:flex lg:flex-row lg:justify-center lg:w-auto lg:items-center lg:gap-x-5 lg:mr-[10px] flex-col items-end w-full text-white text-[25px] list-none ${isOpen ? 'flex' : 'hidden'}`}>
 
-        <Navbar_Lists list="home"/>
-        <Navbar_Lists list="menu"/>
-        <Navbar_Lists list="about"/>
-        <Navbar_Lists list="contact"/>
+        <Navbar_Lists refProp={homeRef} list="home"/>
+        <Navbar_Lists refProp={menuRef} list="menu"/>
+        <Navbar_Lists refProp={aboutRef} list="about"/>
+        <Navbar_Lists refProp={contactRef} list="contact"/>
         
       </ul>
     </nav>
